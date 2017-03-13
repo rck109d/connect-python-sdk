@@ -187,7 +187,7 @@ Class | Method | HTTP request
 
 - **Type**: OAuth
 - **Flow**: accessCode
-- **Authorization URL**: https://connect.squareup.com/oauth2/authorize?client_id=CLIENT_ID&scope=SCOPES&state=STATE
+- **Authorization URL**: https://connect.squareup.com/oauth2/authorize?<PARAMETERS>
 - **Scopes**: 
  - **MERCHANT_PROFILE_READ**: GET endpoints related to a merchant's business and location entities. Almost all Connect API applications need this permission in order to obtain a merchant's location IDs
  - **PAYMENTS_READ**: GET endpoints related to transactions and refunds
