@@ -1,5 +1,6 @@
 from __future__ import absolute_import
 
+from .catalog_api import CatalogApi
 from .checkout_api import CheckoutApi
 from .customer_api import CustomerApi
 from .customer_card_api import CustomerCardApi

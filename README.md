@@ -91,6 +91,17 @@ All URIs are relative to [Square Connect V2 Documentation](https://docs.connect.
 
 Class | Method | HTTP request 
 ------------ | ------------- | ------------- 
+*CatalogApi* | [**batch_delete_catalog_objects**](docs/CatalogApi.md#batch_delete_catalog_objects) | **POST** /v2/catalog/batch-delete
+*CatalogApi* | [**batch_retrieve_catalog_objects**](docs/CatalogApi.md#batch_retrieve_catalog_objects) | **POST** /v2/catalog/batch-retrieve
+*CatalogApi* | [**batch_upsert_catalog_objects**](docs/CatalogApi.md#batch_upsert_catalog_objects) | **POST** /v2/catalog/batch-upsert
+*CatalogApi* | [**catalog_info**](docs/CatalogApi.md#catalog_info) | **GET** /v2/catalog/info
+*CatalogApi* | [**delete_catalog_object**](docs/CatalogApi.md#delete_catalog_object) | **DELETE** /v2/catalog/object/{object_id}
+*CatalogApi* | [**list_catalog**](docs/CatalogApi.md#list_catalog) | **GET** /v2/catalog/list
+*CatalogApi* | [**retrieve_catalog_object**](docs/CatalogApi.md#retrieve_catalog_object) | **GET** /v2/catalog/object/{object_id}
+*CatalogApi* | [**search_catalog_objects**](docs/CatalogApi.md#search_catalog_objects) | **POST** /v2/catalog/search
+*CatalogApi* | [**update_item_modifier_lists**](docs/CatalogApi.md#update_item_modifier_lists) | **POST** /v2/catalog/update-item-modifier-lists
+*CatalogApi* | [**update_item_taxes**](docs/CatalogApi.md#update_item_taxes) | **POST** /v2/catalog/update-item-taxes
+*CatalogApi* | [**upsert_catalog_object**](docs/CatalogApi.md#upsert_catalog_object) | **POST** /v2/catalog/object
 *CheckoutApi* | [**create_checkout**](docs/CheckoutApi.md#create_checkout) | **POST** /v2/locations/{location_id}/checkouts
 *CustomerApi* | [**create_customer**](docs/CustomerApi.md#create_customer) | **POST** /v2/customers
 *CustomerApi* | [**delete_customer**](docs/CustomerApi.md#delete_customer) | **DELETE** /v2/customers/{customer_id}
@@ -112,9 +123,39 @@ Class | Method | HTTP request
 ## Documentation For Models
 
  - [Address](docs/Address.md)
+ - [BatchDeleteCatalogObjectsRequest](docs/BatchDeleteCatalogObjectsRequest.md)
+ - [BatchDeleteCatalogObjectsResponse](docs/BatchDeleteCatalogObjectsResponse.md)
+ - [BatchRetrieveCatalogObjectsRequest](docs/BatchRetrieveCatalogObjectsRequest.md)
+ - [BatchRetrieveCatalogObjectsResponse](docs/BatchRetrieveCatalogObjectsResponse.md)
+ - [BatchUpsertCatalogObjectsRequest](docs/BatchUpsertCatalogObjectsRequest.md)
+ - [BatchUpsertCatalogObjectsResponse](docs/BatchUpsertCatalogObjectsResponse.md)
  - [CaptureTransactionRequest](docs/CaptureTransactionRequest.md)
  - [CaptureTransactionResponse](docs/CaptureTransactionResponse.md)
  - [Card](docs/Card.md)
+ - [CatalogCategory](docs/CatalogCategory.md)
+ - [CatalogDiscount](docs/CatalogDiscount.md)
+ - [CatalogIdMapping](docs/CatalogIdMapping.md)
+ - [CatalogInfoRequest](docs/CatalogInfoRequest.md)
+ - [CatalogInfoResponse](docs/CatalogInfoResponse.md)
+ - [CatalogInfoResponseLimits](docs/CatalogInfoResponseLimits.md)
+ - [CatalogItem](docs/CatalogItem.md)
+ - [CatalogItemModifierListInfo](docs/CatalogItemModifierListInfo.md)
+ - [CatalogItemVariation](docs/CatalogItemVariation.md)
+ - [CatalogModifier](docs/CatalogModifier.md)
+ - [CatalogModifierList](docs/CatalogModifierList.md)
+ - [CatalogModifierOverride](docs/CatalogModifierOverride.md)
+ - [CatalogObject](docs/CatalogObject.md)
+ - [CatalogObjectBatch](docs/CatalogObjectBatch.md)
+ - [CatalogQuery](docs/CatalogQuery.md)
+ - [CatalogQueryExact](docs/CatalogQueryExact.md)
+ - [CatalogQueryItemsForModifierList](docs/CatalogQueryItemsForModifierList.md)
+ - [CatalogQueryItemsForTax](docs/CatalogQueryItemsForTax.md)
+ - [CatalogQueryPrefix](docs/CatalogQueryPrefix.md)
+ - [CatalogQueryRange](docs/CatalogQueryRange.md)
+ - [CatalogQuerySortedAttribute](docs/CatalogQuerySortedAttribute.md)
+ - [CatalogQueryText](docs/CatalogQueryText.md)
+ - [CatalogTax](docs/CatalogTax.md)
+ - [CatalogV1Id](docs/CatalogV1Id.md)
  - [ChargeRequest](docs/ChargeRequest.md)
  - [ChargeResponse](docs/ChargeResponse.md)
  - [Checkout](docs/Checkout.md)
@@ -132,11 +173,16 @@ Class | Method | HTTP request
  - [Customer](docs/Customer.md)
  - [CustomerGroupInfo](docs/CustomerGroupInfo.md)
  - [CustomerPreferences](docs/CustomerPreferences.md)
+ - [DeleteCatalogObjectRequest](docs/DeleteCatalogObjectRequest.md)
+ - [DeleteCatalogObjectResponse](docs/DeleteCatalogObjectResponse.md)
  - [DeleteCustomerCardRequest](docs/DeleteCustomerCardRequest.md)
  - [DeleteCustomerCardResponse](docs/DeleteCustomerCardResponse.md)
  - [DeleteCustomerRequest](docs/DeleteCustomerRequest.md)
  - [DeleteCustomerResponse](docs/DeleteCustomerResponse.md)
  - [Error](docs/Error.md)
+ - [ItemVariationLocationOverrides](docs/ItemVariationLocationOverrides.md)
+ - [ListCatalogRequest](docs/ListCatalogRequest.md)
+ - [ListCatalogResponse](docs/ListCatalogResponse.md)
  - [ListCustomersRequest](docs/ListCustomersRequest.md)
  - [ListCustomersResponse](docs/ListCustomersResponse.md)
  - [ListLocationsRequest](docs/ListLocationsRequest.md)
@@ -150,16 +196,26 @@ Class | Method | HTTP request
  - [Order](docs/Order.md)
  - [OrderLineItem](docs/OrderLineItem.md)
  - [Refund](docs/Refund.md)
+ - [RetrieveCatalogObjectRequest](docs/RetrieveCatalogObjectRequest.md)
+ - [RetrieveCatalogObjectResponse](docs/RetrieveCatalogObjectResponse.md)
  - [RetrieveCustomerRequest](docs/RetrieveCustomerRequest.md)
  - [RetrieveCustomerResponse](docs/RetrieveCustomerResponse.md)
  - [RetrieveTransactionRequest](docs/RetrieveTransactionRequest.md)
  - [RetrieveTransactionResponse](docs/RetrieveTransactionResponse.md)
+ - [SearchCatalogObjectsRequest](docs/SearchCatalogObjectsRequest.md)
+ - [SearchCatalogObjectsResponse](docs/SearchCatalogObjectsResponse.md)
  - [Tender](docs/Tender.md)
  - [TenderCardDetails](docs/TenderCardDetails.md)
  - [TenderCashDetails](docs/TenderCashDetails.md)
  - [Transaction](docs/Transaction.md)
  - [UpdateCustomerRequest](docs/UpdateCustomerRequest.md)
  - [UpdateCustomerResponse](docs/UpdateCustomerResponse.md)
+ - [UpdateItemModifierListsRequest](docs/UpdateItemModifierListsRequest.md)
+ - [UpdateItemModifierListsResponse](docs/UpdateItemModifierListsResponse.md)
+ - [UpdateItemTaxesRequest](docs/UpdateItemTaxesRequest.md)
+ - [UpdateItemTaxesResponse](docs/UpdateItemTaxesResponse.md)
+ - [UpsertCatalogObjectRequest](docs/UpsertCatalogObjectRequest.md)
+ - [UpsertCatalogObjectResponse](docs/UpsertCatalogObjectResponse.md)
  - [VoidTransactionRequest](docs/VoidTransactionRequest.md)
  - [VoidTransactionResponse](docs/VoidTransactionResponse.md)
 
@@ -167,13 +223,21 @@ Class | Method | HTTP request
 ## Documentation For Enums
 
  - [CardBrand](docs/CardBrand.md)
+ - [CatalogDiscountType](docs/CatalogDiscountType.md)
+ - [CatalogItemProductType](docs/CatalogItemProductType.md)
+ - [CatalogModifierListSelectionType](docs/CatalogModifierListSelectionType.md)
+ - [CatalogObjectType](docs/CatalogObjectType.md)
+ - [CatalogPricingType](docs/CatalogPricingType.md)
  - [Country](docs/Country.md)
  - [Currency](docs/Currency.md)
  - [ErrorCategory](docs/ErrorCategory.md)
  - [ErrorCode](docs/ErrorCode.md)
+ - [InventoryAlertType](docs/InventoryAlertType.md)
  - [LocationCapability](docs/LocationCapability.md)
  - [RefundStatus](docs/RefundStatus.md)
  - [SortOrder](docs/SortOrder.md)
+ - [TaxCalculationPhase](docs/TaxCalculationPhase.md)
+ - [TaxInclusionType](docs/TaxInclusionType.md)
  - [TenderCardDetailsEntryMethod](docs/TenderCardDetailsEntryMethod.md)
  - [TenderCardDetailsStatus](docs/TenderCardDetailsStatus.md)
  - [TenderType](docs/TenderType.md)
