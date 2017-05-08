@@ -40,7 +40,7 @@ class V1Variation(object):
             'id': 'str',
             'name': 'str',
             'item_id': 'str',
-            'ordinal': 'int',
+            'ordinal': 'str',
             'pricing_type': 'str',
             'price_money': 'V1Money',
             'sku': 'str',
@@ -152,7 +152,7 @@ class V1Variation(object):
         ndicates the variation's list position when displayed in Square Register and the merchant dashboard. If more than one variation for the same item has the same ordinal value, those variations are displayed in alphabetical order
 
         :return: The ordinal of this V1Variation.
-        :rtype: int
+        :rtype: str
         """
         return self._ordinal
 
@@ -163,7 +163,7 @@ class V1Variation(object):
         ndicates the variation's list position when displayed in Square Register and the merchant dashboard. If more than one variation for the same item has the same ordinal value, those variations are displayed in alphabetical order
 
         :param ordinal: The ordinal of this V1Variation.
-        :type: int
+        :type: str
         """
 
         self._ordinal = ordinal
