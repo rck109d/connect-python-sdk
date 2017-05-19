@@ -1,2 +1,4 @@
 *.py[cod]
 travis-ci/accounts.json
+build
+dist
